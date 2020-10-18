@@ -1,2 +1,3 @@
 
-export const detail : any = JSON.parse('[{"question": "What is the capital of India ?", "options": ["Delhi", "Mumbai"], "answer": "Delhi"}]')
+export const detail : any = JSON.parse(
+    '[{"question": "For which game Tiger Woods is famous ?", "options": ["Basketball", "Football","Golf","Pole-vault"], "answer": "Golf"},{"question": "Who produced the first automobile ?", "options": ["Gottleib Daimler", "Henry Ford","Rudolf Diesel","Karl Benz"], "answer": "Karl Benz"},{"question": "What is the capital of India ?", "options": ["Delhi", "Mumbai","Banglore","Goa"], "answer": "Delhi"},{"question": "What is the capital of USA ?", "options": ["Washington, D.C.", "New York","Chicago","California"], "answer": "Washington, D.C."}]')
