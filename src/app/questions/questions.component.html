@@ -1,1 +1,8 @@
-<p>questions works!</p>
+<!-- <p>questions works!</p> -->
+
+<div>
+    <h2>{{out.question}}</h2>
+    <div *ngFor = "let opt of out.options">
+        <input type="radio" id="out.options" (click) = "validate(opt,out,out.options)" [value] = "opt">{{opt}}
+    </div>
+</div>

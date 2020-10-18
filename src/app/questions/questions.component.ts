@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { DataService } from '../data.service';
 })
 export class QuestionsComponent implements OnInit {
 
+  @Input() out: any;
   details: any[];
   constructor(private ser: DataService) { }
 
