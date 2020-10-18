@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-questions',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionsComponent implements OnInit {
 
-  constructor() { }
+  details: any[];
+  constructor(private ser: DataService) { }
 
   ngOnInit(): void {
+    this.details = this.ser.questions();
   }
 
 }
