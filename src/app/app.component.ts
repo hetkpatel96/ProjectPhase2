@@ -11,5 +11,5 @@ export class AppComponent {
   constructor(private ser: DataService) { }
   questions = this.ser.questions();
 
-  title = 'ProjectPhase2';
+  title = 'General Knowledge Quiz';
 }
