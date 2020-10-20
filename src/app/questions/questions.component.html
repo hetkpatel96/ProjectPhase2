@@ -4,6 +4,12 @@
 <div>
     <h2>{{out.question}}</h2>
     <div *ngFor = "let opt of out.options">
-        <input type="radio" id="out.options" (click) = "validate(opt,out,out.options)" [value] = "opt">  {{opt}}
+        <input type="radio" id="out.options" (click) = "validate(opt,out,out.options)" [name]="out.options" [value] = "opt">  {{opt}}
+    </div>
+    <div *ngIf = "value" class="alert alert-success">
+        Correct answer
+    </div>
+    <div *ngIf = "value1" class="alert alert-danger">
+        Wrong answer
     </div>
 </div>

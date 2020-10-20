@@ -9,11 +9,23 @@ import { DataService } from '../data.service';
 export class QuestionsComponent implements OnInit {
 
   @Input() out: any;
+  value: boolean;
+  value1: boolean;
   details: any[];
   constructor(private ser: DataService) { }
 
   ngOnInit(): void {
     this.details = this.ser.questions();
+  }
+
+  validate(opt,out,ans){
+    this.value = false;
+    this.value1 = false;
+    if(opt == out.answer){
+      this.value = true;
+    }else{
+      this.value1 = true;
+    }
   }
 
 }
