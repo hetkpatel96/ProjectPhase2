@@ -13,6 +13,7 @@ export class QuestionsComponent implements OnInit {
   value1: boolean;
   details: any[];
   constructor(private ser: DataService) { }
+  questions = this.ser.questions();
 
   ngOnInit(): void {
     this.details = this.ser.questions();
@@ -27,6 +28,14 @@ export class QuestionsComponent implements OnInit {
       this.value1 = true;
     }
   }
+
+  /* clearForm() {
+    (<HTMLFormElement>document.getElementById("reset")).reset;
+   }
+
+   refresh(): void {
+    window.location.reload();
+  } */
 
 }
 

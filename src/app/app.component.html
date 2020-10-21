@@ -26,6 +26,11 @@
     Welcome to {{title}} !!
   </h1>
 </div> -->
+
+  <!-- <div>
+    <a routerLink="questions">General Knowledge Quiz</a>
+  </div> -->
+
   <form id="reset">
     <div class="container">
       <div *ngFor="let ques of questions" class="text-dark">
@@ -34,6 +39,7 @@
         </app-questions>
       </div>
     </div>
+    
     <div class="container">
       <div class="text-center">
         <button type="reset" onclick="clearForm()" class="btn btn-secondary">Reset</button>
@@ -41,3 +47,5 @@
       </div>
     </div>
   </form>
+
+  <!-- <router-outlet></router-outlet> -->
