@@ -12,4 +12,13 @@ export class AppComponent {
   questions = this.ser.questions();
 
   title = 'General Knowledge Quiz';
+
+  clearForm() {
+    (<HTMLFormElement>document.getElementById("reset")).reset;
+   }
+
+   refresh(): void {
+    window.location.reload();
 }
+}
+
