@@ -9,11 +9,11 @@ import { DataService } from './data.service';
 export class AppComponent {
   
   constructor(private ser: DataService) { }
-  questions = this.ser.questions();
+ questions = this.ser.questions();
 
   title = 'General Knowledge Quiz';
 
-  clearForm() {
+   clearForm() {
     (<HTMLFormElement>document.getElementById("reset")).reset;
    }
 
