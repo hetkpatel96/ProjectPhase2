@@ -12,6 +12,7 @@ export class QuestionsComponent implements OnInit {
   value: boolean;
   value1: boolean;
   details: any[];
+  disabled: any; //disable initialize
   constructor(private ser: DataService) { }
   quests = this.ser.questions();
 
@@ -27,9 +28,10 @@ export class QuestionsComponent implements OnInit {
     }else{
       this.value1 = true;
     }
+    this.disabled = "disabled"; //called disabled
   }
 
-  /*  clearForm() {
+   /* clearForm() {
     (<HTMLFormElement>document.getElementById("reset")).reset;
    }
 
