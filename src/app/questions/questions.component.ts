@@ -12,6 +12,7 @@ export class QuestionsComponent implements OnInit {
   value: boolean;
   value1: boolean;
   details: any[];
+  ans_array: boolean[] = [];
   disabled: any; //disable initialize
   constructor(private ser: DataService) { }
   quests = this.ser.questions();
@@ -25,8 +26,10 @@ export class QuestionsComponent implements OnInit {
     this.value1 = false;
     if(opt == out.answer){
       this.value = true;
+      this.ans_array.push(true);
     }else{
       this.value1 = true;
+      this.ans_array.push(false);
     }
     this.disabled = "disabled"; //called disabled
   }

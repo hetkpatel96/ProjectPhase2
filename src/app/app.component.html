@@ -19,7 +19,7 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-4">{{title}} !!</h1><br>
-           <p><em>This is the quiz on your confidence level. Therfore, onece you click on the option, you will not be able to change your answer</em></p>
+           <p><em>This is the quiz on your confidence level. Therfore, once you click on the option, you will not be able to change your answer</em></p>
            <p><em>You can refresh quiz and attempt it again.</em></p>
       </div>
       <!-- <div>
@@ -56,11 +56,9 @@
   <br><br>
   <div class="text-center">
     <!-- <button *ngIf="pager.index < pager.size-1" class="btn btn-primary" (click)="goTo(pager.index + 1);">Next</button> -->
-    <button class="btn btn-info" (click)="quiz_score();">See Your Score</button>
-    <br><br>
+    <button class="btn btn-info" (click)="quiz_score();">See Your Score</button> <br><br> <div id="score"></div>
     <hr />
-    <hr /><br><br>
-    <div id="score"></div>
+    
 </div>
   <!-- <app-questions></app-questions> -->
   <router-outlet></router-outlet>

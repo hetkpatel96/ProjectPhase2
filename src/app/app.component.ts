@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
+import { QuestionsComponent } from './questions/questions.component';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,9 @@ export class AppComponent {
   
   constructor(private ser: DataService) { }
  questions = this.ser.questions();
+ ans = this.ser.ans_array();
 
- ans_array: boolean[] = [];
-  title = 'General Knowledge Quiz';
+  title = 'Java Quiz';
 
   //  clearForm() {
   //   (<HTMLFormElement>document.getElementById("reset")).reset;
@@ -28,28 +29,23 @@ export class AppComponent {
 
     document.getElementById("score").className = ``;
 
-    for (var i  = 0; i < this.questions.questions().length; i++) {
-      if (this.ans_array[i] == true) {
+    for (var i  = 0; i < this.questions.length; i++) {
+      if (this.ans[i] == true) {
         count++;
       }
     }
 
-    if (count/this.questions.questions().length >= 0.5) {
+    if (count/this.questions.length >= 0.5) {
 
       document.getElementById("score").className = "alert alert-success";
-      document.getElementById("score").innerHTML = `Your Score is ` + count.toString() + ` out of ` + this.questions.questions().length.toString() + `, which is greater 
-      than or equal to 50%. Thus, you have passed the quiz.`;
+      document.getElementById("score").innerHTML = `You have passed the quiz.`;
 
     }
 
     else {
       document.getElementById("score").className = "alert alert-danger";
-      document.getElementById("score").innerHTML = `Your Score is ` + count.toString() + ` out of ` + this.questions.questions().length.toString() + `, which is less 
-      than 50%. Thus, you have failed the quiz. You will have to retake the quiz in the future again.`;
+      document.getElementById("score").innerHTML = `You have failed the quiz. Please retake the Quiz.`;
     }
-
-    
-    
   }
 }
 
